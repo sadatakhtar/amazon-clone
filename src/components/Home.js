@@ -19,10 +19,10 @@ function Home() {
             rating={4}
             />
           <Product 
-            title='Muddyfox bike pump'
-            price={10.99}
-            image="https://images.sportsdirect.com/images/products/93780611_l.jpg"
-            rating={3}
+            title='Samsung Galaxy Book pro 360 15.6", i7, 16GB in Mystic Navy'
+            price={1499.00}
+            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREYtMLgIXds4wpTAEAkXqnbrMI-HDR0-rzm8mh5_FQwrZ9tVtmbod0MHvtC4nHhOeLo9FeT99D&usqp=CAc"
+            rating={4}
           />
         </div>
 
@@ -39,19 +39,19 @@ function Home() {
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToCik_dWaHjVBgS8llldHKtOQfC2VH8yqNxD8gu3zvEGV2zByz1TJa-Z4ZHPnEnBcGxmuPxw0F&usqp=CAc" 
             rating={3}/>
           <Product 
-            title='Samsung Galaxy Book pro 360 15.6", i7, 16GB in Mystic Navy'
-            price={1,499.00}
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREYtMLgIXds4wpTAEAkXqnbrMI-HDR0-rzm8mh5_FQwrZ9tVtmbod0MHvtC4nHhOeLo9FeT99D&usqp=CAc"
-            rating={4}
+            title='Amazon echo Plus 2. Generation sprachassistent black' 
+            price={167.42} 
+            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK29EHZxBPjmpZE_XqHhAhl18cpkLVjxd2Plu-6iqQoYIX5njtJXv9p5wr&usqp=CAc" 
+            rating={5}
           />
         </div>
 
         <div className="home_row">
           <Product 
-            title='Amazon echo Plus 2. Generation sprachassistent black' 
-            price={167.42} 
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK29EHZxBPjmpZE_XqHhAhl18cpkLVjxd2Plu-6iqQoYIX5njtJXv9p5wr&usqp=CAc" 
-            rating={5}
+            title='Samsung LC49RG90SSUXEN 49" Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 X 1440' 
+            price={1094.98} 
+            image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg" 
+            rating={4}
           />
         </div>
       </div>
