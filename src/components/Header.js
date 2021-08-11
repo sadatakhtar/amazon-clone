@@ -36,14 +36,14 @@ function Header() {
           <span className="header_option_lineOne">Your</span>
           <span className="header_option_lineTwo">Prime</span>
         </div>
-        <div className='header_optionBasket'>
-          <Link to='/checkout'>
+        <Link to='/checkout'>
+          <div className='header_optionBasket'>
             <ShoppingBasketIcon className="header_basketIcon"/>
-          </Link>
-         
-          <span className='header_option_lineTwo header_basketCount'>0</span>
+            <span className='header_option_lineTwo header_basketCount'>0</span>
 
-        </div>
+          </div>
+        </Link>
+        
 
 
       </div>
