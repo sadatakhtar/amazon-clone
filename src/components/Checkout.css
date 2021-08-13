@@ -9,6 +9,9 @@
     width: 100%;
     margin-bottom: 10px;
 }
+.checkout_email {
+    padding: 10px;
+}
 
 .checkout_title {
     padding: 10px;
