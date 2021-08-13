@@ -6,13 +6,7 @@ import { getBasketTotal } from "../reducer";
 
 function Subtotal({ price }) {
   const [state, dispatch] = useStateValue();
-  //console.log(state)
-  //     let [total, setTotal] = useState(0);
-
-  //    let tot = state.basket.map(item => {
-  //         setTotal(item.price)
-  //     })
-
+ 
   return (
     <div className="subtotal">
       <CurrencyFormat
