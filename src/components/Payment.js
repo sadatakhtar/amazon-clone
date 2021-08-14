@@ -5,7 +5,7 @@ import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   return (
     <div className="payment">
       <div className="payment_container">
@@ -18,10 +18,10 @@ function Payment() {
             <h3>Delivery Address</h3>
           </div>
           <div className="payment_address">
-              <p>{user?.email}</p>
-              <p>123 React Lane</p>
-              <p>Birmingham B1 1AB</p>
-            </div>
+            <p>{user?.email}</p>
+            <p>123 React Lane</p>
+            <p>Birmingham B1 1AB</p>
+          </div>
         </div>
 
         {/* payment section - review items */}
