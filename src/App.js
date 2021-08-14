@@ -10,33 +10,32 @@ import { useStateValue } from "./StateProvider";
 import Payment from "./components/Payment";
 
 function App() {
-  const [dispatch] = useStateValue();
+  const [state, dispatch] = useStateValue();
 
   useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      console.log("The user is >>>> ", authUser);
-      if (authUser) {
+    auth.onAuthStateChanged(authUser => {
+      console.log('The user is >>>> ', authUser);
+      if(authUser){
         //user just logged in / was logged in
         dispatch({
-          type: "SET_USER",
+          type: 'SET_USER',
           user: authUser,
-        });
-      } else {
+        })
+      }else{
         //user logged out
         dispatch({
-          type: "SET_USER",
+          type: 'SET_USER',
           user: null,
-        });
+        })
       }
-    });
-    // eslint-disable-next-line
-  }, []);
-
+    })
+  }, [])
+  
   return (
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/payment">
+        <Route path="/payment">
             <Header />
             <Payment />
           </Route>
