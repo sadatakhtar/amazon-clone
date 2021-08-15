@@ -17,6 +17,7 @@ const promise = loadStripe(
 
 function App() {
   const [state, dispatch] = useStateValue();
+  console.log(state)
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -35,6 +36,7 @@ function App() {
         });
       }
     });
+    // eslint-disable-next-line
   }, []);
 
   return (

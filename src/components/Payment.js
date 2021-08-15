@@ -9,7 +9,7 @@ import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   const history = useHistory();
 
   const stripe = useStripe();
@@ -41,6 +41,7 @@ function Payment() {
     e.preventDefault();
     setProcessing(true);
 
+    // eslint-disable-next-line
     const payload = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
         card: elements.getElement(CardElement)
