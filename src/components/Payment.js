@@ -27,7 +27,7 @@ function Payment() {
       const response = await axios({
         method: 'post',
         //stripe expects total in currency units
-        url: `/payments/create?total=${getBasketTotal(basket) * 100 }`
+        url: `http://localhost:5001/clone-76120/us-central1/api/payments/create?total=${getBasketTotal(basket) * 100 }`
       })
       setClientSecret(response.data.clientSecret)
 
@@ -35,6 +35,8 @@ function Payment() {
 
     getClientSecret();
   }, [basket])
+
+  console.log('the client secret >>>>', clientSecret)
 
   const handleSubmit = async (e) => {
     //stripe stuff
