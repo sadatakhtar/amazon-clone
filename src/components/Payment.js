@@ -3,10 +3,12 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import CurrencyFormat from "react-currency-format";
 import { Link, useHistory } from "react-router-dom";
+import { db } from "../firebase";
 import { getBasketTotal } from "../reducer";
 import { useStateValue } from "../StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
+
 
 function Payment() {
   const [{ basket, user }] = useStateValue();
@@ -50,9 +52,25 @@ function Payment() {
       }
     }).then(({ paymentIntent }) => {
       //paymentintent = payment confirmation
+
+      db
+        .collection('users')
+        .doc(user?.uid)
+        .collection('orders')
+        .doc(paymentIntent.id)
+        .set({
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created
+
+        })
       setSucceeded(true);
       setError(null);
       setProcessing(false);
+
+      // dispatchEvent({
+      //   type: 'EMPTY_BASKET'
+      // })
 
       history.replace('/orders')
     })
