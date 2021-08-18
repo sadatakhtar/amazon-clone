@@ -29,7 +29,7 @@ function Payment() {
       const response = await axios({
         method: 'post',
         //stripe expects total in currency units
-        url: `http://localhost:5001/clone-76120/us-central1/api/payments/create?total=${getBasketTotal(basket) * 100 }`
+        url: `https://us-central1-clone-76120.cloudfunctions.net/api/payments/create?total=${getBasketTotal(basket) * 100 }`
       })
       setClientSecret(response.data.clientSecret)
 
