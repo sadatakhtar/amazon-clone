@@ -34,14 +34,14 @@ app.post('/payments/create', async (request, response) => {
 
     //ok - created
     response.status(201).send({
-        clientSecret: paymentIntent.client_secret 
+        clientSecret: paymentIntent.client_secret,
 
     });
 
 })
 
 //Listen
-exports.api = functions.https.onRequest(app)
+exports.api = functions.https.onRequest(app);
 
 //Example endpoint
 //http://localhost:5001/clone-76120/us-central1/api
